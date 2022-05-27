@@ -65,6 +65,7 @@ class HomeController extends Controller
         
     }
 
+
     /**
      * PROFILE
      */
