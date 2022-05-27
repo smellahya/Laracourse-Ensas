@@ -9,6 +9,7 @@ class Subject extends Model
     protected $fillable = [
         'name',
         'slug',
+        'link',
         'subject_code',
         'teacher_id',
         'description'

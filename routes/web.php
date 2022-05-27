@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/profile', 'HomeController@profile')->name('profile');
 Route::get('/profile/edit', 'HomeController@profileEdit')->name('profile.edit');
 Route::put('/profile/update', 'HomeController@profileUpdate')->name('profile.update');
@@ -52,6 +53,8 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
 
 Route::group(['middleware' => ['auth','role:Teacher']], function () 
 {
+    Route::get('/home/claaslist', 'ControllerTeacher@classList')->name('classList');
+    Route::get('/home/classattendences', 'ControllerTeacher@classattendences')->name('classattendences');
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
 });

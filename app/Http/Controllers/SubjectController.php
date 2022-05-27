@@ -45,6 +45,7 @@ class SubjectController extends Controller
         $request->validate([
             'name'          => 'required|string|max:255|unique:subjects',
             'subject_code'  => 'required|numeric',
+            'link'   => 'required|string|max:255',
             'teacher_id'    => 'required|numeric',
             'description'   => 'required|string|max:255'
         ]);
@@ -53,6 +54,7 @@ class SubjectController extends Controller
             'name'          => $request->name,
             'slug'          => Str::slug($request->name),
             'subject_code'  => $request->subject_code,
+            'link'          => $request->link,
             'teacher_id'    => $request->teacher_id,
             'description'   => $request->description
         ]);
@@ -96,6 +98,7 @@ class SubjectController extends Controller
         $request->validate([
             'name'          => 'required|string|max:255|unique:subjects,name,'.$subject->id,
             'subject_code'  => 'required|numeric',
+            'link'   => 'required|string|max:255',
             'teacher_id'    => 'required|numeric',
             'description'   => 'required|string|max:255'
         ]);
@@ -104,6 +107,7 @@ class SubjectController extends Controller
             'name'          => $request->name,
             'slug'          => Str::slug($request->name),
             'subject_code'  => $request->subject_code,
+            'link'          => $request->link,
             'teacher_id'    => $request->teacher_id,
             'description'   => $request->description
         ]);
