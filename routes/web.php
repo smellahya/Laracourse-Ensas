@@ -67,4 +67,7 @@ Route::group(['middleware' => ['auth','role:Parent']], function ()
 
 Route::group(['middleware' => ['auth','role:Student']], function () {
 
+    Route::get('/myattendance', 'Student_interfaceController@index')->name('myattendance.show');
+    Route::get('/mysubjectlist', 'Student_interfaceController@index2')->name('mysujectlist.show');
+
 });

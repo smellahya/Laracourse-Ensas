@@ -15,7 +15,7 @@ class Class_Subject_ListController extends Controller
         
         $teacher = Teacher::with(['user','subjects'])->withCount('subjects','classes')->findOrFail($user->teacher->id);
 
-        return view('backend.classlist.show', compact('teacher'));
+        return view('backend.subjectlist.show', compact('teacher'));
         
         
     }
@@ -26,7 +26,7 @@ class Class_Subject_ListController extends Controller
         
         $teacher = Teacher::with(['user','subjects'])->withCount('subjects','classes')->findOrFail($user->teacher->id);
 
-        return view('backend.subjectlist.show', compact('teacher'));
+        return view('backend.classlist.show', compact('teacher'));
         
         
     }
