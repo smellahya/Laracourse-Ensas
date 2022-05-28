@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Unit;
 use Illuminate\Http\Request;
 
 class UnitController extends Controller
@@ -13,7 +14,8 @@ class UnitController extends Controller
      */
     public function index()
     {
-        return view('backend.subjectlist.units.index');
+        $units = Unit::all();
+        return view('backend.subjectlist.units.index',compact('units'));
     }
 
     /**
