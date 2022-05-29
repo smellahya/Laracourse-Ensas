@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Unit;
+use App\Subject;
 use Illuminate\Http\Request;
+use SebastianBergmann\Environment\Console;
 
 class UnitController extends Controller
 {
@@ -12,10 +14,11 @@ class UnitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $units = Unit::all();
-        return view('backend.subjectlist.units.index',compact('units'));
+        $subject = Subject::find($id);
+        $units = Unit::Where('subject_id',$id)->get();
+            return view('backend.subjectlist.units.index',compact('units','subject'));
     }
 
     /**
