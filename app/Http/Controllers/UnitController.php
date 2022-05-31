@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Unit;
+use App\Subject;
+use App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 
 class UnitController extends Controller
@@ -12,10 +14,17 @@ class UnitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index($id)
+    {        
         $units = Unit::all();
-        return view('backend.subjectlist.units.index',compact('units'));
+
+        $subjects = Subject::find($id);
+        
+        $units = Unit::where('subject_id', $id)->get();
+
+        // $subject = Subject::with('units');
+
+        return view('backend.subjectlist.units.index',['subjects' => $subjects],['units' => $units],['subject_id' => $id]);
     }
 
     /**
@@ -25,7 +34,9 @@ class UnitController extends Controller
      */
     public function create()
     {
-        
+        $units = Unit::all();
+
+        return view('backend.subjectlist.units.create',compact('units'));
     }
 
     /**
@@ -37,6 +48,24 @@ class UnitController extends Controller
     public function store(Request $request)
     {
         //
+        $request->validate([
+            'chapter'          => 'required|string|max:255',
+            'chapter_file_link'  => 'required|string',
+            'description'   => 'required|string|max:255',
+            'subject_id'  => 'required|numeric'
+
+            
+        ]);
+
+        Unit::create([
+            'chapter'          => $request->chapter,
+            'chapter_file_link'  => $request->chapter_file_link,
+            'description'   => $request->description,
+            'subject_id'   => $request->subject_id 
+            
+        ]);
+
+        return redirect()->route('units.index');
     }
 
     /**
