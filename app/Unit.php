@@ -11,6 +11,7 @@ class Unit extends Model
         'chapter',
         'chapter_file_link',
         'description',
+        'subject_id'
     ];
 
 

@@ -16,7 +16,7 @@
         </div>
 
         <div class="table w-full mt-8 bg-white rounded">
-            <form action="{{ route('units.store') }}" method="POST" class="w-full max-w-xl px-6 py-12">
+            <form action="{{ route('units.store',$subjects->id) }}" method="POST" class="w-full max-w-xl px-6 py-12">
                 @csrf
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
