@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::get('/roles-permissions', 'RolePermissionController@roles')->name('roles-permissions');
     Route::get('/role-create', 'RolePermissionController@createRole')->name('role.create');
     Route::post('/role-store', 'RolePermissionController@storeRole')->name('role.store');
+    
     Route::get('/role-edit/{id}', 'RolePermissionController@editRole')->name('role.edit');
     Route::put('/role-update/{id}', 'RolePermissionController@updateRole')->name('role.update');
 
@@ -47,6 +48,10 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::resource('parents', 'ParentsController');
     Route::resource('student', 'StudentController');
     Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
+    Route::get('/anounecement', 'AnnounecemtsControlle@index')->name('anounecement.index');
+    Route::get('/anounecement/create', 'AnnounecemtsControlle@create')->name('anounecement.create');
+    Route::post('/anounecement/store', 'AnnounecemtsControlle@store')->name('anounecement.store');
+    Route::delete('/anounecement-destroy/{id}', 'AnnounecemtsControlle@destroy')->name('anounecement.destroy');
 
 });
 
