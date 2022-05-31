@@ -33,11 +33,16 @@ class UnitController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         $units = Unit::all();
 
-        return view('backend.subjectlist.units.create',compact('units'));
+        // $subject = Subject::where('subject_id', $id)->get();
+        $subjects = Subject::find($id);
+
+
+
+        return view('backend.subjectlist.units.create',compact('units','subjects'));
     }
 
     /**
@@ -46,14 +51,16 @@ class UnitController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
         //
+        $subjects = Subject::find($id);
+
         $request->validate([
             'chapter'          => 'required|string|max:255',
             'chapter_file_link'  => 'required|string',
             'description'   => 'required|string|max:255',
-            'subject_id'  => 'required|numeric'
+            // // 'subject_id'  => 'required|numeric'
 
             
         ]);
@@ -62,11 +69,11 @@ class UnitController extends Controller
             'chapter'          => $request->chapter,
             'chapter_file_link'  => $request->chapter_file_link,
             'description'   => $request->description,
-            'subject_id'   => $request->subject_id 
+            'subject_id'   => $subjects->id
             
         ]);
 
-        return redirect()->route('units.index');
+        return redirect()->route('units.index',$subjects->id);
     }
 
     /**
