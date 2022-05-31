@@ -82,7 +82,7 @@ class UnitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Unit $unit)
     {
         //
     }
@@ -93,9 +93,18 @@ class UnitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Unit $unit,$id)
     {
         //
+        // $unit = Unit::latest()->get();
+
+        // $subject = Subject::where('subject_id', $id)->get();
+        // $subjects = Subject::latest()->get();
+        $unit = Unit::find($id);
+        
+        $subjects = Subject::find($id);
+
+        return view('backend.subjectlist.units.edit',compact('unit','subjects'));
     }
 
     /**
@@ -105,9 +114,31 @@ class UnitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Unit $unit,$id)
     {
         //
+        $subjects = Subject::find($id);
+        $unit = Unit::find($id);
+
+
+        $request->validate([
+            'chapter'          => 'required|string|max:255'.$unit->id,
+            'chapter_file_link'  => 'required|string',
+            'description'   => 'required|string|max:255',
+            // // 'subject_id'  => 'required|numeric'
+
+            
+        ]);
+
+        $unit->update([
+            'chapter'          => $request->chapter,
+            'chapter_file_link'  => $request->chapter_file_link,
+            'description'   => $request->description,
+            // 'subject_id'   =>$subjects->id
+            
+        ]);
+
+        return redirect()->route('units.index',$subjects->id);
     }
 
     /**
@@ -116,8 +147,13 @@ class UnitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Unit $unit,$id)
     {
         //
+        unit::where('id', $id)->delete();
+
+        // $unit->delete();
+
+        return back();
     }
 }
