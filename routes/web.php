@@ -59,10 +59,6 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
     Route::post('attendance', 'AttendanceController@store')->name('teacher.attendance.store');
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
     Route::get('/classlist/units/{id}', 'UnitController@index')->name('units.index');
-<<<<<<< HEAD
-    
-=======
->>>>>>> 2befd5dd93d0cecf6492c875c89a443922ae4e25
     Route::get('/unit-create', 'UnitController@create')->name('units.create');
     Route::get('/unit-edit', 'UnitController@edit')->name('units.edit');
     Route::get('/unit-destroy', 'UnitController@destroy')->name('units.destroy');
