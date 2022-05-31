@@ -62,6 +62,9 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
     Route::get('/unit-create', 'UnitController@create')->name('units.create');
     Route::get('/unit-edit', 'UnitController@edit')->name('units.edit');
     Route::get('/unit-destroy', 'UnitController@destroy')->name('units.destroy');
+
+    Route::post('/unit-store', 'UnitController@store')->name('units.store');
+
     
 });
 

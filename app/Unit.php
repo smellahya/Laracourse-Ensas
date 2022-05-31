@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Unit extends Model
 {
     //
+    protected $fillable = [
+        'chapter',
+        'chapter_file_link',
+        'description',
+    ];
 
 
 
