@@ -60,10 +60,14 @@ Route::group(['middleware' => ['auth','role:Teacher']], function ()
     Route::get('attendance-create/{classid}', 'AttendanceController@createByTeacher')->name('teacher.attendance.create');
     Route::get('/classlist/units/{id}', 'UnitController@index')->name('units.index');
     Route::get('/unit-create/{id}', 'UnitController@create')->name('units.create');
-    Route::get('/unit-edit', 'UnitController@edit')->name('units.edit');
-    Route::post('/unit-destroy/{id}', 'UnitController@destroy')->name('units.destroy');
+    Route::get('/unit-edit/{id}', 'UnitController@edit')->name('units.edit');
+    Route::delete('/unit-destroy/{id}', 'UnitController@destroy')->name('units.destroy');
+
+    // Route::resource('units', 'UnitController');
+
 
     Route::post('/unit-store/{id}', 'UnitController@store')->name('units.store');
+    Route::put('/unit-update/{id}', 'UnitController@update')->name('units.update');
 
     
 });
