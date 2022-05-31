@@ -120,7 +120,7 @@ class UnitController extends Controller
         $subjects = Subject::find($id);
         $unit = Unit::find($id);
 
-
+        
         $request->validate([
             'chapter'          => 'required|string|max:255'.$unit->id,
             'chapter_file_link'  => 'required|string',
@@ -138,7 +138,8 @@ class UnitController extends Controller
             
         ]);
 
-        return redirect()->route('units.index',$subjects->id);
+        return back();
+        return back();
     }
 
     /**

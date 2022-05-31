@@ -23,7 +23,7 @@
         @foreach ($units as $unit)
             <div class="flex flex-wrap items-center text-gray-700 border-t-2 border-l-4 border-r-4 border-gray-300">
                 <div class="w-3/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $unit->chapter }}</div>
-                <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight">{{ $unit->chapter_file_link }}</div>
+                <div class="w-2/12 px-4 py-3 text-sm font-semibold text-gray-600 tracking-tight"><a class="btn btn-outline-primary" role="button" href="{{ $unit->chapter_file_link }}">Previw</a></div>
                 <div class="w-3/12 px-4 py-3 text-sm text-gray-600 tracking-tight">{{ $unit->description }}</div>
                 <div class="w-2/12 flex items-center justify-end px-3">
                     <a href="{{ route('units.edit',$unit->id) }}">
