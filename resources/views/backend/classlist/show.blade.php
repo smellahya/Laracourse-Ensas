@@ -14,7 +14,11 @@
             @foreach ($teacher->subjects as $subject)
                 <div class="flex items-center justify-between border border-gray-200">
                     <div class="w-1/3 text-left text-gray-600 py-2 px-4 font-medium">{{ $subject->subject_code }}</div>
+<<<<<<< HEAD
                     <div class="w-1/3 text-left text-gray-600 py-2 px-4 font-medium"><a href="{{route('units.index',$subject->id)}}">{{ $subject->name }}</a></div>
+=======
+                    <div class="w-1/3 text-left text-gray-600 py-2 px-4 font-medium"><a href="{{route('units.index', $subject->id)}}">{{ $subject->name }}</a></div>
+>>>>>>> 2befd5dd93d0cecf6492c875c89a443922ae4e25
                     <div class="w-1/3 text-right text-gray-600 py-2 px-4 font-medium">{{ $subject->teacher->user->name }}</div>
                 </div>
             @endforeach

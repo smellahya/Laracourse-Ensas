@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Unit;
 use App\Subject;
+<<<<<<< HEAD
 use App\Http\Controllers\Auth;
+=======
+>>>>>>> 2befd5dd93d0cecf6492c875c89a443922ae4e25
 use Illuminate\Http\Request;
+use SebastianBergmann\Environment\Console;
 
 class UnitController extends Controller
 {
@@ -15,6 +19,7 @@ class UnitController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($id)
+<<<<<<< HEAD
     {        
         $units = Unit::all();
 
@@ -25,6 +30,12 @@ class UnitController extends Controller
         // $subject = Subject::with('units');
 
         return view('backend.subjectlist.units.index',['subjects' => $subjects],['units' => $units],['subject_id' => $id]);
+=======
+    {
+        $subject = Subject::find($id);
+        $units = Unit::Where('subject_id',$id)->get();
+            return view('backend.subjectlist.units.index',compact('units','subject'));
+>>>>>>> 2befd5dd93d0cecf6492c875c89a443922ae4e25
     }
 
     /**
