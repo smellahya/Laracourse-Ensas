@@ -2,7 +2,8 @@
 
 @section('content')
 
-<div class="w-full max-w-xs mx-auto">
+<div >
+<div class="w-full max-w-xs mx-auto" >
     <form method="POST" action="{{ route('login') }}" class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4">
         @csrf
         <div class="mb-4">
@@ -37,6 +38,7 @@
             </button>
         </div>
     </form>
+</div>
 </div>
 
 @endsection

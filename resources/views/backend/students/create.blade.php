@@ -60,7 +60,7 @@
                 <div class="md:flex md:items-center mb-6">
                     <div class="md:w-1/3">
                         <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                            Roll Number
+                            Student Number
                         </label>
                     </div>
                     <div class="md:w-2/3">
@@ -99,10 +99,7 @@
                                 <input name="gender" class="mr-2 leading-tight" type="radio" value="female">
                                 <span class="text-sm">Female</span>
                             </label>
-                            <label class="ml-4 block text-gray-500 font-bold">
-                                <input name="gender" class="mr-2 leading-tight" type="radio" value="other">
-                                <span class="text-sm">Other</span>
-                            </label>
+                            
                         </div>
                         @error('gender')
                             <p class="text-red-500 text-xs italic">{{ $message }}</p>
