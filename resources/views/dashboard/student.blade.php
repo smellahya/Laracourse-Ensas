@@ -1,4 +1,4 @@
-<div class="mt-8 bg-white rounded">
+<div class=" mt-8 bg-white rounded">
         <div class="w-full max-w-2xl px-6 py-12">
 
             <div class="md:flex md:items-center mb-6">
@@ -88,7 +88,7 @@
                     </label>
                 </div>
                 <div class="md:w-2/3 block text-gray-600 font-bold">
-                    <span class="text-gray-600 font-bold">{{ $student->class->class_name }}</span>
+                    <span class="text-gray-600 font-bold"></span>
                 </div>
             </div>
             <div class="md:flex md:items-center mb-6">

@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Grade;
 use App\Parents;
 use App\Student;
+use App\Subject;
 use App\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Support\Str;
+use PhpParser\Builder\Class_;
 
 class HomeController extends Controller
 {
@@ -34,12 +36,13 @@ class HomeController extends Controller
         $user = Auth::user();
         
         if ($user->hasRole('Admin')) {
-
+            $classes = Grade::latest()->get();
             $parents = Parents::latest()->get();
+            $subjects = Subject::latest()->get();
             $teachers = Teacher::latest()->get();
             $students = Student::latest()->get();
 
-            return view('home', compact('parents','teachers','students'));
+            return view('home', compact('subjects','teachers','classes','students'));
 
         } elseif ($user->hasRole('Teacher')) {
 
