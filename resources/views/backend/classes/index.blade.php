@@ -18,7 +18,7 @@
                 <div class="w-1/12 px-4 py-3">#</div>
                 <div class="w-2/12 px-4 py-3">Name</div>
                 <div class="w-1/12 px-4 py-3">Students</div>
-                <div class="w-4/12 px-4 py-3 text-center">Subject Code</div>
+                <div class="w-4/12 px-4 py-3 text-center">Subject Name</div>
                 <div class="w-2/12 px-4 py-3">Teacher</div>
                 <div class="w-2/12 px-4 py-3 text-right">Action</div>
             </div>
