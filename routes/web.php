@@ -50,6 +50,7 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
     Route::get('/anounecement', 'AnnounecemtsControlle@index')->name('anounecement.index');
     Route::get('/anounecement/create', 'AnnounecemtsControlle@create')->name('anounecement.create');
+    Route::get('/anounecement/edit', 'AnnounecemtsControlle@edit')->name('anounecement.edit');
     Route::post('/anounecement/store', 'AnnounecemtsControlle@store')->name('anounecement.store');
     Route::delete('/anounecement-destroy/{id}', 'AnnounecemtsControlle@destroy')->name('anounecement.destroy');
 

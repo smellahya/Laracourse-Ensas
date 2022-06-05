@@ -217,7 +217,8 @@ h1, h2, h3, h4, h5,
   .ul-check.success li:before {
     color: #8bc34a; }
   .ul-check.primary li:before {
-    color: #51be78; }
+    color: #7f54c3; }
+
 
 .select-wrap, .wrap-icon {
   position: relative; }
@@ -258,7 +259,8 @@ h1, h2, h3, h4, h5,
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
-      color: #51be78;
+      color: #433995;
+
       display: inline-block;
       padding: 5px 20px; }
     .site-navbar .site-navigation .site-menu a {
@@ -275,7 +277,8 @@ h1, h2, h3, h4, h5,
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #51be78; }
+          color: #433995; }
+
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {
@@ -357,7 +360,8 @@ h1, h2, h3, h4, h5,
             background: #f4f5f9;
             color: #25262a; }
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
-        color: #51be78; }
+        color: #7f54c3; }
+
       .site-navbar .site-navigation .site-menu .has-children:hover, .site-navbar .site-navigation .site-menu .has-children:focus, .site-navbar .site-navigation .site-menu .has-children:active {
         cursor: pointer; }
         .site-navbar .site-navigation .site-menu .has-children:hover > .dropdown, .site-navbar .site-navigation .site-menu .has-children:focus > .dropdown, .site-navbar .site-navigation .site-menu .has-children:active > .dropdown {
@@ -439,12 +443,14 @@ h1, h2, h3, h4, h5,
       position: relative;
       color: #212529; }
       .site-mobile-menu .site-nav-wrap a:hover {
-        color: #51be78; }
+        color: #7f54c3; }
+
     .site-mobile-menu .site-nav-wrap li {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li .active > a {
-        color: #51be78; }
+        color: #7f54c3; }
+
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -551,11 +557,12 @@ h1, h2, h3, h4, h5,
         display: inline-block;
         text-decoration: none !important; }
         .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover {
-          color: #51be78; }
+          color: #7f54c3; }
         .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active:after {
           background: #51be78; }
       .sticky-wrapper.is-sticky .site-navbar .site-menu > li.active > a {
-        color: #51be78; }
+        color: #7f54c3; }
+
   .sticky-wrapper .shrink {
     padding-top: 10px !important;
     padding-bottom: 10px !important; }
@@ -598,9 +605,10 @@ h1, h2, h3, h4, h5,
     display: inline-block;
     color: #bdbdbd; }
     .custom-breadcrumns a:hover {
-      color: #51be78; }
+      color: #7f54c3; }
   .custom-breadcrumns .current {
-    color: #51be78; }
+    color: #7f54c3; }
+
 
 .section-title-underline {
   color: #000; }
@@ -610,7 +618,8 @@ h1, h2, h3, h4, h5,
   .section-title-underline.style-2 {
     color: #fff; }
     .section-title-underline.style-2 span {
-      border-color: #51be78; }
+      border-color: #7f54c3; }
+
 
 .section-bg {
   background-size: cover;
@@ -633,10 +642,11 @@ h1, h2, h3, h4, h5,
       z-index: 2; }
     .section-bg.style-1 .icon {
       font-size: 3.5rem;
-      color: #51be78; }
+      color: #7f54c3; }
     .section-bg.style-1 h3 {
       font-size: 20px;
-      color: #51be78;
+      color: #7f54c3;
+
       margin-bottom: 30px; }
     .section-bg.style-1 p {
       color: #7697c6; }
@@ -697,7 +707,8 @@ h1, h2, h3, h4, h5,
       font-weight: bold;
       color: #303030; }
       .news-updates .post-entry-big .post-content .post-heading a:hover {
-        color: #51be78; }
+        color: #7f54c3; }
+
   .news-updates .post-entry-big.horizontal .img-link {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 90px;
