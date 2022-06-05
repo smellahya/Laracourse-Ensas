@@ -89,6 +89,7 @@
                 </div>
                 <div class="md:w-2/3 block text-gray-600 font-bold">
                     <span class="text-gray-600 font-bold">{{ $student->class->class_name}}</span>
+
                 </div>
             </div>
             <div class="md:flex md:items-center mb-6">
