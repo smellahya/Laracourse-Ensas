@@ -66,7 +66,7 @@
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="home" class="d-block">
-              <img src="images/logo.jpg" alt="Image" class="img-fluid">
+              <img src="images/logo-ensa-safi.png" alt="Image" class="img-fluid">
             </a>
           </div>
           <div class="mr-auto">

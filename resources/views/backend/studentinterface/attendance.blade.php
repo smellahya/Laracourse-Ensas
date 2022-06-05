@@ -12,7 +12,7 @@
     @foreach ($student->attendances as $attendance)
         <div class="flex items-center justify-between border border-gray-200 -mb-px">
             <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $attendance->attendence_date }}</div>
-            <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $attendance->class->class_name }}</div>
+            <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $student->class->class_name}}</div>
             <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $attendance->teacher->user->name }}</div>
             <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-medium">
                 @if($attendance->attendence_status)
